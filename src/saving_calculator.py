@@ -161,7 +161,7 @@ def calcular_saving(row):
     })
 
 if __name__ == '__main__':
-    df = pd.read_excel('cargas_antecipadas.xlsx', sheet_name='ANTECIPADAS')
+    df = pd.read_excel('data/cargas_antecipadas.xlsx', sheet_name='ANTECIPADAS')
     df.columns = df.columns.str.strip()
     df['DATA COLETA'] = pd.to_datetime(df['DATA COLETA'], dayfirst=True, errors='raise')
     df['DATA AGENDA'] = pd.to_datetime(df['DATA AGENDA'], dayfirst=True, errors='raise')
@@ -169,5 +169,5 @@ if __name__ == '__main__':
     resultados = df.apply(calcular_saving, axis=1)
     df_result = pd.concat([df, resultados], axis=1)
 
-    df_result.to_excel('saving_gerado.xlsx', index=False)
+    df_result.to_excel('data/saving_gerado.xlsx', index=False)
     print("✅ Processo finalizado. Planilha gerada com sucesso!")
