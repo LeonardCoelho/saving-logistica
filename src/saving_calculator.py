@@ -14,27 +14,12 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 # Valores por transportadora
 valores_transportadoras = {
-    'INTERMODAL BRASIL LOGISTICA LTDA': {'valor_por_plt': 32.00, 'transbordo': 0.00, 'diaria': 0.00},
-    'TRANS KOTHE TRANSPORTES RODOVIARIOS SA': {'valor_por_plt': 33.00, 'transbordo': 0.00, 'diaria': 0.00},
-    'RODOBRAS FOODS TRANSPORTES RODOV LTDA': {'valor_por_plt': 54.50, 'transbordo': 2339.00, 'diaria': 0.00},
-    'SA LOG SANTA AMELIA LOGISTICA LTDA': {'valor_por_plt': 33.00, 'transbordo': 1900.00, 'diaria': 0.00},
-    'SUPERFRIO ARMAZENS GERAIS SA': {'valor_por_plt': 30.00, 'transbordo': 3316.00, 'diaria': 0.00},
-    'TRANSPORTES E ARMAZENAGEM ZILLI LTDA': {'valor_por_plt': 80.00, 'transbordo': 0.00, 'diaria': 0.00},
-    'GAB TRANSPORTES LTDA': {'valor_por_plt': 0.00, 'transbordo': 0.00, 'diaria': 600.00},
-    'TRANSPORTADORA E COMERCIO LUNARDI LTDA': {'valor_por_plt': 0.00, 'transbordo': 0.00, 'diaria': 990.00},
-    'TRANSPORTADORA & COMERCIO LUNARDI LTDA': {'valor_por_plt': 0.00, 'transbordo': 0.00, 'diaria': 990.00},
-    'TRANSPORTES MAROSO LTDA': {'valor_por_plt': 45.00, 'transbordo': 2400.00, 'diaria': 0.00},
-    'TRANSPORTES MARVEL SA': {'valor_por_plt': 0.00, 'transbordo': 0.00, 'diaria': 1200.00},
-    'TAFF BRASIL TRANSPORTES LTDA': {'valor_por_plt': 0.00, 'transbordo': 0.00, 'diaria': 740.00},
-    'TOMBINI &amp; CIA. LTDA': {'valor_por_plt': 0.00, 'transbordo': 0.00, 'diaria': 750.00},
-    'TRANSPORTES TOZZO LTDA': {'valor_por_plt': 0.00, 'transbordo': 0.00, 'diaria': 820.00},
-    'TRANSPORTES TREMEA LTDA': {'valor_por_plt': 0.00, 'transbordo': 0.00, 'diaria': 900.00},
-    'TOMBINI CIA LTDA': {'valor_por_plt': 0.00, 'transbordo': 0.00, 'diaria': 750.00},
-    'TOMBINI & CIA. LTDA': {'valor_por_plt': 0.00, 'transbordo': 0.00, 'diaria': 750.00},
-    'CASTELANI TRANSPORTE RODOVIARIO C LTDA': {'valor_por_plt': 0.00, 'transbordo': 0.00, 'diaria': 550.00},
-    'DIAS PENHA TRANSPORTES SERV INTER LTDA': {'valor_por_plt': 0.00, 'transbordo': 0.00, 'diaria': 382.00},
-    'MVC TRANSPORTE E LOGISTICA SA': {'valor_por_plt': 23.00, 'transbordo': 0.00, 'diaria': 0.00},
-    'MVC TRANSPORTE E LOGISTICA S A': {'valor_por_plt': 23.00, 'transbordo': 0.00, 'diaria': 0.00}
+    'TRANSPORTADORA_A': {'valor_por_plt': 55.00, 'transbordo': 2400.00, 'diaria': 0.00},
+    'TRANSPORTADORA_B': {'valor_por_plt': 33.00, 'transbordo': 1900.00, 'diaria': 0.00},
+    'TRANSPORTADORA_C': {'valor_por_plt': 32.00, 'transbordo': 0.00, 'diaria': 0.00},
+    'TRANSPORTADORA_D': {'valor_por_plt': 0.00, 'transbordo': 0.00, 'diaria': 900.00},
+    'TRANSPORTADORA_E': {'valor_por_plt': 0.00, 'transbordo': 0.00, 'diaria': 750.00},
+    'TRANSPORTADORA_F': {'valor_por_plt': 80.00, 'transbordo': 0.00, 'diaria': 0.00}
 }
 
 # Coordenadas fixas para cidades problemáticas
@@ -184,5 +169,5 @@ if __name__ == '__main__':
     resultados = df.apply(calcular_saving, axis=1)
     df_result = pd.concat([df, resultados], axis=1)
 
-    df_result.to_excel('sua_base_com_saving_atualizada.xlsx', index=False)
+    df_result.to_excel('saving_gerado.xlsx', index=False)
     print("✅ Processo finalizado. Planilha gerada com sucesso!")
