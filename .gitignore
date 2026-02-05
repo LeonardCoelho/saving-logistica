@@ -1,5 +1,4 @@
 __pycache__/
 *.pyc
 *.json
-*.xlsx
 coord_cache.json
