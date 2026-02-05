@@ -161,7 +161,7 @@ def calcular_saving(row):
     })
 
 if __name__ == '__main__':
-    df = pd.read_excel('ANTECIPADAS.xlsx', sheet_name='ANTECIPADAS')
+    df = pd.read_excel('cargas_antecipadas.xlsx', sheet_name='ANTECIPADAS')
     df.columns = df.columns.str.strip()
     df['DATA COLETA'] = pd.to_datetime(df['DATA COLETA'], dayfirst=True, errors='raise')
     df['DATA AGENDA'] = pd.to_datetime(df['DATA AGENDA'], dayfirst=True, errors='raise')
